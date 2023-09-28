@@ -20,7 +20,7 @@ cd observerPattern/
 go run .
 ```
 ```bash 
-cd .. && cd StrategyPattern/
+cd .. && cd strategyPattern/
 ```
 ```
 bash go run .
