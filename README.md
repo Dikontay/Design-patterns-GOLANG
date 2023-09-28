@@ -14,7 +14,7 @@ Some of them needs specific types of examinations. So  this code has tries to so
 git clone https://github.com/Dikontay/Design-patterns-GOLANG.git
 ```
 ```bash 
-cd obserberPattern/
+cd observerPattern/
 ```
 ```bash 
 go run .
