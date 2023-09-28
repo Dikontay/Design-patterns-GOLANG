@@ -22,6 +22,6 @@ go run .
 ```bash 
 cd .. && cd strategyPattern/
 ```
-```
-bash go run .
+```bash
+go run .
 ```
