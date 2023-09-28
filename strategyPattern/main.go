@@ -53,7 +53,7 @@ func (p *ProgrammingTest) PassTest() string {
 	return fmt.Sprintf("Pass the Programming test - Contester: %s, Quiz: %s", p.Contester, p.Quiz)
 }
 
-func main(){
+func checkStrategy(){
 	englishCourse := &Course{
 		CourseName:    "English Course",
 		EnterStrategy: &EnglishTest{Speaking: "Good", Reading: "Excellent", Writing: "Very Good", Listening: "Average"},
@@ -79,4 +79,8 @@ func main(){
 	fmt.Println("For Spanish Course:", spanishCourse.EnterStrategy.PassTest())
 
 
+}
+
+func main(){
+	checkStrategy()
 }
