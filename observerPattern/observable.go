@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type IObservable interface{
+type IWebsite interface{
 	Add(c Client)
 	Notify()
 	Delete(c Client)
@@ -30,7 +30,7 @@ type Client struct{
 }
 
 func (o *Client) Update() {
-	fmt.Println("Check the updated courses")
+	fmt.Printf("Check the updated courses %s\n", o.UserName)
 }
 
 type WebSite struct{
@@ -40,14 +40,16 @@ type WebSite struct{
 
 func (o *WebSite) addNewCourse (c Course){
 	o.CoursesList=append(o.CoursesList, c)
+	fmt.Printf("There is new course: %s, staring date: %s, ending date: %s\n",c.CourseName, c.StartingDate, c.EndingDate )
 }
 
-func(o WebSite) getNewCourses() []Course{
+func(o WebSite) getNewCourses()[]Course{
 	return o.CoursesList
 }
 
 func (w *WebSite) Add(client Client){
 	w.AllClients=append(w.AllClients, client)
+	
 }
 
 func (o *WebSite) Notify(){
@@ -73,6 +75,9 @@ func CheckObserver() {
 	website.addNewCourse(course1)
 	website.addNewCourse(course2)
 
+	website.Notify()
+	course3 := Course{CourseName: "Web-Devolopment", StartingDate: "2023-11-01", EndingDate: "2023-11-30"}
+	website.addNewCourse(course3)
 	website.Notify()
 }
 
