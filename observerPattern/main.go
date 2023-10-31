@@ -1,4 +1,4 @@
-package main
+package observer
 
 import (
 	"fmt"
@@ -107,7 +107,7 @@ func CheckObserver() {
 	website.Notify()
 }
 
-func main(){
-	CheckObserver()
-}
+// func main(){
+// 	CheckObserver()
+// }
 
