@@ -31,6 +31,7 @@ func (e *English) getPrice() float64 {
 	return 15000.0
 }
 
+// factory of course
 type CourseFactory interface {
 	createCourse() Course
 }
