@@ -7,6 +7,7 @@ type Course interface {
 	getPrice() float64
 }
 
+// wrapper
 type CourseDecorator struct {
 	decoratedCourse Course
 }
